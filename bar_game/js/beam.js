@@ -411,10 +411,10 @@ function preload(arr){
         images[i] = new Image();
         images[i].src = arr[i];
     	images[i].onload = function(){
-    		console.log(1)
     		imgload();
     	}
     }
+    console.log(images);
 }
 preload(
 	['images/again-bg.png',
