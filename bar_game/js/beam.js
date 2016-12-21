@@ -1,4 +1,4 @@
-
+console.log(1)
 var VERSION = "1.1.9";
 // 设定尺寸
 var viewWidth = view.viewSize.width;
@@ -414,7 +414,6 @@ function preload(arr){
     		imgload();
     	}
     }
-    console.log(images);
 }
 preload(
 	['images/again-bg.png',
