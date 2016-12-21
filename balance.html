@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=0">
+	<title>平衡木</title>
+	<link rel="stylesheet" href="bar_game/css/beam.css?v=3.2">
+	<script src="bar_game/js/jquery.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script>
+		var _hmt = _hmt || [];
+	    (function() {
+	      var hm = document.createElement("script");
+	      hm.src = "//hm.baidu.com/hm.js?08fbff2126b854cf44dd20dcfc7817ad";
+	      var s = document.getElementsByTagName("script")[0];
+	      s.parentNode.insertBefore(hm, s);
+	    })();
+
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', 'UA-75805547-1', 'auto');
+	    ga('send', 'pageview');
+	    function trackEvent(category,action,opt_label,opt_value){
+	        _hmt.push(['_trackEvent', category, action, opt_label, opt_value]);
+	        ga('send', 'event', category, action, opt_label, opt_value);
+	    }
+
+		trackEvent('平衡木游戏推广','链接打开数','访问量');
+
+        if (!window.paper) {
+            var paperScript = document.createElement('script');
+            paperScript.src = "bar_game/js/paper-full.min.js";
+            document.head.appendChild(paperScript);
+        }
+        var this_text = '重温经典系列No.1《平衡木》我们要重温的，也许不仅仅是游戏。';
+        var friend_text = '最怀念的不是游戏本身，而是玩游戏的人';
+        wx.config({
+            debug: false, 
+
+            appId: "{$signPackage['appId']}", // 必填，公众号的唯一标识
+
+            timestamp: "{$signPackage['timestamp']}", // 必填，生成签名的时间戳
+
+            nonceStr: "{$signPackage['nonceStr']}", // 必填，生成签名的随机串
+
+	        signature: "{$signPackage['signature']}", // 必填，签名，见附录1
+
+	        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+	    });
+	    function share_th(){
+	    	wx.ready(function () {
+		        wx.onMenuShareAppMessage({
+		            title: this_text, // 分享标题
+		            desc: friend_text,         
+		            link: "http://www.i-ev.com/index.php?m=activity&c=game&a=balance",
+		            imgUrl: 'http://www.i-ev.com/statics/game/bar_game/images/blance_200.jpg',
+		            type: 'link',
+		            dataUrl: '',
+		            success: function () {
+		                trackEvent('平衡木游戏推广','分享','分享给朋友');
+		            },
+		            cancel: function () {
+
+		            }
+
+		        });
+		        wx.onMenuShareTimeline({
+		            title: this_text, // 分享标题
+		            link: "http://www.i-ev.com/index.php?m=activity&c=game&a=balance",
+		            imgUrl: 'http://www.i-ev.com/statics/game/bar_game/images/blance_200.jpg',
+		            success: function () {
+		                trackEvent('平衡木游戏推广','分享','分享朋友圈');
+		            },
+		            cancel: function () {
+
+		            }
+		        });
+		    });
+	    }
+	    share_th();
+    </script>
+</head>
+<body>
+	<div id="loading">
+		<div class="wrap">
+			<h2 class="load-logo">
+				<img src="bar_game/images/download-logo.png" alt="">
+			</h2>
+			<p>中国电动汽车跨界平台运营商</p>
+			<span class='loadtext'>游戏载入中<span><i>...</i></span></span>
+		</div>
+	</div>
+	<div class="canvas-box">
+		<canvas id="canvas" resize stats hidpi="on"></canvas>
+	</div>
+	<div class="canvas-btn">
+		<div class="btn btn-left">
+			<!-- <div class="touch"></div> -->
+		</div>
+		<div class="btn btn-right">
+			<!-- <div class="touch"></div> -->
+		</div>
+	</div>
+	<div class="start">
+		<div class="start-button">
+			<div class="B start-left">
+				<img src="bar_game/images/start-btn-btn.png" alt="">
+				开始游戏
+			</div>
+			<div class="B start-right">
+				<img src="bar_game/images/ranking-btn-bg.png" alt="">
+				排行榜
+			</div>
+		</div>
+	</div>
+	<div class="Ranking-List">
+		<span class="logo">
+			<img src="bar_game/images/logo.png" alt="">
+		</span>
+		<h2 class="rank-tit">排行榜</h2>
+		<div class="rank-me">
+			<div class="rank-me-box">
+				<div class="list-man">
+					<span class="num">暂无</span>
+					<span class="man-img">
+						<img src="bar_game/images/touxiang.png" alt="">
+					</span>
+					<span class="man-name">
+						暂无
+					</span>
+				</div>
+				<div class="list-time">
+					暂无
+				</div>
+			</div>
+		</div>
+		<ul class="rank-list"></ul>
+		<!-- <div class="rank-banner" style="display: none">
+			<img src="bar_game/images/ranking-banner.png" alt="">
+			<span class="close-rank-banner"></span>
+		</div> -->
+		<span class="close-Rank"></span>
+	</div>
+	<div class="end">
+		<div class="end-box">
+			<span class="end-time"></span>
+			<div class="end-courage">
+				不错呦，继续加油哦！！
+			</div>
+			<div class="end-Ranking">您的最好成绩是<span class="goodtime"></span>" 位列第<span class="goodnum">计算中...</span></div>
+			<ul class="three-list"></ul>
+			<div class="end-btn">
+				<div class="endB Ebtn-left">
+					<img src="bar_game/images/share.png" alt="">
+					分享
+				</div>
+				<div class="endB Ebtn-center">
+					<img src="bar_game/images/ranking-end-bg.png" alt="">
+					排行榜
+				</div>
+				<div class="endB Ebtn-right">
+					<img src="bar_game/images/again-bg.png" alt="">
+					重来
+				</div>
+			</div>
+		</div>
+		<div class="end-banner" data-falg="true">
+			<img src="bar_game/images/ranking-banner.png" alt="">
+			<!-- <div class="banner-logo">
+				<img src="bar_game/images/JNClogo.png" alt="">
+			</div>	
+			<p class="banner-tit">聚能充APP</p>
+			<p class="banner-text">下载注册送50元电费</p> -->
+			<span class="close-endbanner"></span>
+		</div>
+		<div class="end-banner1" data-falg="true">
+			<img src="bar_game/images/end-banner1bg.png" alt="">
+			<span class="close-endbanner1"></span>
+		</div>
+	</div>
+	<div class="download active-no">
+		<div class="download-box">
+			<div class="download-img">
+				<img src="bar_game/images/download-banner.png" alt="">
+			</div>
+			<div class="wushi">
+				<img src="bar_game/images/wushiicon.png" alt="">
+			</div>
+			<h2 class='download-tit'>聚能充</h2>
+			<p class="download-text">做贴心的找桩充电APP</p>
+			<div class="download-code">
+				<div class="code-left">
+					<span class="downbtn">
+						<a href="http://ju.i-ev.com/index.html?source=downBalanceBeam">下载APP</a>
+					</span>
+					<div class="downtext">
+						扫码关注聚能充公众号<br/>体验便捷式找桩充电服务
+						<i></i>
+					</div>
+				</div>
+				<div class="code-right">
+					<img src="bar_game/images/JUCgongzhonghao.png" alt="">
+				</div>
+			</div>
+			<span class="download-logo"></span>
+			<span class="close-down"></span>
+		</div>
+	</div>
+	<div class="Advertisement active-no">
+		<div class="Adver-box">
+			<a href="http://www.i-ev.com/huodong/wdopen">
+				<img src="bar_game/images/Advertisementbg.png" alt="">
+				<span class="close-Adver"></span>
+			</a>
+		</div>
+	</div>
+	<div class="ajax-load">
+		<img src="bar_game/images/loading.gif" alt="">
+	</div>
+	<div class="start-footer" data-falg="true">
+		<i>关注聚能充公众号即送50元电费</i>
+		<span class="close-start-footer"></span>
+	</div>
+	<div class="start-footer1" data-falg="true">
+		<img src="bar_game/images/startfooter1banner.png" alt="">
+		<span class="close-start-footer1"></span>
+	</div>
+	<div class="share-box">
+		<img src="bar_game/images/share_shou.png" alt="">
+		<p>点击右上角<br/>告诉你的小伙伴们^_^</p>
+	</div>
+	<div class="rank-baer-open active-no">
+			<img src="bar_game/images/rank-banner-cont.png" alt="">
+			<!-- <span class="rank-code"></span> -->
+			<span class="close-rankopen"></span>
+		</div>
+	<div class="imglist">
+		<img id="wood" src="bar_game/images/wood_bg.png" alt="">
+		<img id="bar" src="bar_game/images/bar_bg.png" alt="">
+		<img id="pin" src="bar_game/images/pin_circle_bg.png" alt="">
+	</div>
+</body>
+<script>
+	;
+    (function () {
+        var cw = window.innerWidth;
+        var $html = document.querySelector('html');
+        if (cw > 540) {
+            $html.style.fontSize = '33.75px';
+        } else {
+            $html.style.fontSize = cw * .05 + 'px';
+        }
+    })(); 
+	
+</script>
+<script type="text/paperscript" canvas="canvas" src="bar_game/js/beam.js?v=2.5"></script>
+<script src="bar_game/js/track.js?v=1.3"></script>
+</html>
