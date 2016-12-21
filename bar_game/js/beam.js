@@ -319,9 +319,9 @@ function ajax(){
 								}
 							}
 						}
-						this_text = '重温经典系列No.1《平衡木》多年之后我仍能坚持'+date.my.score+'秒不倒，你呢？';
-						friend_text = '手指也有节奏，就怕你平衡不够···';
-						share_th();
+						// this_text = '重温经典系列No.1《平衡木》多年之后我仍能坚持'+date.my.score+'秒不倒，你呢？';
+						// friend_text = '手指也有节奏，就怕你平衡不够···';
+						// share_th();
 					}else{
 						alert('排行更新失败');
 						$('.ajax-load').css({display:'none'});
@@ -416,32 +416,32 @@ function preload(arr){
     }
 }
 preload(
-	['http://www.i-ev.com/statics/game/bar_game/images/again-bg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/bar_bg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/btn-left-bg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/btn-right-bg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/logo.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/number1.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/number2.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/number3.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/rank_titbg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/share.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/shou-start.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/start-bg.jpg',
-	'http://www.i-ev.com/statics/game/bar_game/images/start-button.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/start-footer-close.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/start-inde-bg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/touxiang.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/wood_bg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/download-banner.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/JNClogo.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/gongzhonghao.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/downloadbtn.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/start-bg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/ranking-btn-bg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/start-btn-btn.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/Advertisementbg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/end-banner1bg.png',
-	'http://www.i-ev.com/statics/game/bar_game/images/startfooter1banner.png'
+	['bar_game/images/again-bg.png',
+	'bar_game/images/bar_bg.png',
+	'bar_game/images/btn-left-bg.png',
+	'bar_game/images/btn-right-bg.png',
+	'bar_game/images/logo.png',
+	'bar_game/images/number1.png',
+	'bar_game/images/number2.png',
+	'bar_game/images/number3.png',
+	'bar_game/images/rank_titbg.png',
+	'bar_game/images/share.png',
+	'bar_game/images/shou-start.png',
+	'bar_game/images/start-bg.jpg',
+	'bar_game/images/start-button.png',
+	'bar_game/images/start-footer-close.png',
+	'bar_game/images/start-inde-bg.png',
+	'bar_game/images/touxiang.png',
+	'bar_game/images/wood_bg.png',
+	'bar_game/images/download-banner.png',
+	'bar_game/images/JNClogo.png',
+	'bar_game/images/gongzhonghao.png',
+	'bar_game/images/downloadbtn.png',
+	'bar_game/images/start-bg.png',
+	'bar_game/images/ranking-btn-bg.png',
+	'bar_game/images/start-btn-btn.png',
+	'bar_game/images/Advertisementbg.png',
+	'bar_game/images/end-banner1bg.png',
+	'bar_game/images/startfooter1banner.png'
 	]
 )

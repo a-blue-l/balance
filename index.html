@@ -8,79 +8,79 @@
 	<script src="bar_game/js/jquery.min.js"></script>
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script>
-		var _hmt = _hmt || [];
-	    (function() {
-	      var hm = document.createElement("script");
-	      hm.src = "//hm.baidu.com/hm.js?08fbff2126b854cf44dd20dcfc7817ad";
-	      var s = document.getElementsByTagName("script")[0];
-	      s.parentNode.insertBefore(hm, s);
-	    })();
+		// var _hmt = _hmt || [];
+	 //    (function() {
+	 //      var hm = document.createElement("script");
+	 //      hm.src = "//hm.baidu.com/hm.js?08fbff2126b854cf44dd20dcfc7817ad";
+	 //      var s = document.getElementsByTagName("script")[0];
+	 //      s.parentNode.insertBefore(hm, s);
+	 //    })();
 
-	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	 //    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	 //    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	 //    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	 //    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	    ga('create', 'UA-75805547-1', 'auto');
-	    ga('send', 'pageview');
-	    function trackEvent(category,action,opt_label,opt_value){
-	        _hmt.push(['_trackEvent', category, action, opt_label, opt_value]);
-	        ga('send', 'event', category, action, opt_label, opt_value);
-	    }
+	 //    ga('create', 'UA-75805547-1', 'auto');
+	 //    ga('send', 'pageview');
+	 //    function trackEvent(category,action,opt_label,opt_value){
+	 //        _hmt.push(['_trackEvent', category, action, opt_label, opt_value]);
+	 //        ga('send', 'event', category, action, opt_label, opt_value);
+	 //    }
 
-		trackEvent('平衡木游戏推广','链接打开数','访问量');
+		// trackEvent('平衡木游戏推广','链接打开数','访问量');
 
-        if (!window.paper) {
-            var paperScript = document.createElement('script');
-            paperScript.src = "bar_game/js/paper-full.min.js";
-            document.head.appendChild(paperScript);
-        }
-        var this_text = '重温经典系列No.1《平衡木》我们要重温的，也许不仅仅是游戏。';
-        var friend_text = '最怀念的不是游戏本身，而是玩游戏的人';
-        wx.config({
-            debug: false, 
+  //       if (!window.paper) {
+  //           var paperScript = document.createElement('script');
+  //           paperScript.src = "bar_game/js/paper-full.min.js";
+  //           document.head.appendChild(paperScript);
+  //       }
+  //       var this_text = '重温经典系列No.1《平衡木》我们要重温的，也许不仅仅是游戏。';
+  //       var friend_text = '最怀念的不是游戏本身，而是玩游戏的人';
+  //       wx.config({
+  //           debug: false, 
 
-            appId: "{$signPackage['appId']}", // 必填，公众号的唯一标识
+  //           appId: "{$signPackage['appId']}", // 必填，公众号的唯一标识
 
-            timestamp: "{$signPackage['timestamp']}", // 必填，生成签名的时间戳
+  //           timestamp: "{$signPackage['timestamp']}", // 必填，生成签名的时间戳
 
-            nonceStr: "{$signPackage['nonceStr']}", // 必填，生成签名的随机串
+  //           nonceStr: "{$signPackage['nonceStr']}", // 必填，生成签名的随机串
 
-	        signature: "{$signPackage['signature']}", // 必填，签名，见附录1
+	 //        signature: "{$signPackage['signature']}", // 必填，签名，见附录1
 
-	        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
-	    });
-	    function share_th(){
-	    	wx.ready(function () {
-		        wx.onMenuShareAppMessage({
-		            title: this_text, // 分享标题
-		            desc: friend_text,         
-		            link: "http://www.i-ev.com/index.php?m=activity&c=game&a=balance",
-		            imgUrl: 'http://www.i-ev.com/statics/game/bar_game/images/blance_200.jpg',
-		            type: 'link',
-		            dataUrl: '',
-		            success: function () {
-		                trackEvent('平衡木游戏推广','分享','分享给朋友');
-		            },
-		            cancel: function () {
+	 //        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+	 //    });
+	 //    function share_th(){
+	 //    	wx.ready(function () {
+		//         wx.onMenuShareAppMessage({
+		//             title: this_text, // 分享标题
+		//             desc: friend_text,         
+		//             link: "http://www.i-ev.com/index.php?m=activity&c=game&a=balance",
+		//             imgUrl: 'http://www.i-ev.com/statics/game/bar_game/images/blance_200.jpg',
+		//             type: 'link',
+		//             dataUrl: '',
+		//             success: function () {
+		//                 trackEvent('平衡木游戏推广','分享','分享给朋友');
+		//             },
+		//             cancel: function () {
 
-		            }
+		//             }
 
-		        });
-		        wx.onMenuShareTimeline({
-		            title: this_text, // 分享标题
-		            link: "http://www.i-ev.com/index.php?m=activity&c=game&a=balance",
-		            imgUrl: 'http://www.i-ev.com/statics/game/bar_game/images/blance_200.jpg',
-		            success: function () {
-		                trackEvent('平衡木游戏推广','分享','分享朋友圈');
-		            },
-		            cancel: function () {
+		//         });
+		//         wx.onMenuShareTimeline({
+		//             title: this_text, // 分享标题
+		//             link: "http://www.i-ev.com/index.php?m=activity&c=game&a=balance",
+		//             imgUrl: 'http://www.i-ev.com/statics/game/bar_game/images/blance_200.jpg',
+		//             success: function () {
+		//                 trackEvent('平衡木游戏推广','分享','分享朋友圈');
+		//             },
+		//             cancel: function () {
 
-		            }
-		        });
-		    });
-	    }
-	    share_th();
+		//             }
+		//         });
+		//     });
+	 //    }
+	 //    share_th();
     </script>
 </head>
 <body>
@@ -257,5 +257,5 @@
 	
 </script>
 <script type="text/paperscript" canvas="canvas" src="bar_game/js/beam.js?v=2.5"></script>
-<script src="bar_game/js/track.js?v=1.3"></script>
+<!-- <script src="bar_game/js/track.js?v=1.3"></script> -->
 </html>
