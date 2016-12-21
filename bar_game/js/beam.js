@@ -113,7 +113,7 @@ $('.btn').on('touchend',function(){
 $('.start-right').on('touchstart',function(){
 	$('.Ranking-List').css({display:'block'});
 	$('.ajax-load').css({display:'block'});
-	rank_next();
+	// rank_next();
 })
 $('.close-start-footer').on('touchstart',function(e){
 	e.stopPropagation();
@@ -167,7 +167,7 @@ $('.Ebtn-center').on('touchstart',function(e){
 	e.stopPropagation();
 	$('.Ranking-List').css({display:'block'});
 	$('.ajax-load').css({display:'block'});
-	rank_next();
+	// rank_next();
 })
 $('.share-box').on('click',function(){
 	$(this).css({display:'none'});
