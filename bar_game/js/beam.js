@@ -112,7 +112,7 @@ $('.btn').on('touchend',function(){
 // 点击事件
 $('.start-right').on('touchstart',function(){
 	$('.Ranking-List').css({display:'block'});
-	$('.ajax-load').css({display:'block'});
+	// $('.ajax-load').css({display:'block'});
 	// rank_next();
 })
 $('.close-start-footer').on('touchstart',function(e){
@@ -166,7 +166,7 @@ $('.Ebtn-left').on('click',function(e){
 $('.Ebtn-center').on('touchstart',function(e){
 	e.stopPropagation();
 	$('.Ranking-List').css({display:'block'});
-	$('.ajax-load').css({display:'block'});
+	// $('.ajax-load').css({display:'block'});
 	// rank_next();
 })
 $('.share-box').on('click',function(){
@@ -299,7 +299,7 @@ function endText(){
 	$('.end').css({display:'block'});
 }
 function ajax(){
-	$('.ajax-load').css({display:'block'});
+	// $('.ajax-load').css({display:'block'});
 	var score = timer;
 	$.post('?m=activity&c=game&a=upScore',{'score':score},function(date){
 		if(date.status == 1){
