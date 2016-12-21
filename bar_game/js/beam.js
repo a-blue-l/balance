@@ -201,7 +201,7 @@ function rank_next(){
 				
 			}else{
 				if(!date.my.headimgurl){
-					$('.rank-me-box .list-man .man-img img').attr('src','http://www.i-ev.com/statics/game/bar_game/images/touxiang.png');
+					$('.rank-me-box .list-man .man-img img').attr('src','bar_game/images/touxiang.png');
 				}else{
 					$('.rank-me-box .list-man .man-img img').attr('src',date.my.headimgurl);
 				}
@@ -211,7 +211,7 @@ function rank_next(){
 			}
 			for(var i in date.info){
 				if(!date.info[i].headimgurl){
-					$('.Ranking-List .rank-list').append('<li><div class="list-man"><span class="num">'+date.info[i].ranking+'</span><span class="man-img"><img src="http://www.i-ev.com/statics/game/bar_game/images/touxiang.png"></span><span class="man-name">'+date.info[i].nickname+'</span></div><div class="list-time">'+date.info[i].score+'"</div></li>')
+					$('.Ranking-List .rank-list').append('<li><div class="list-man"><span class="num">'+date.info[i].ranking+'</span><span class="man-img"><img src="bar_game/images/touxiang.png"></span><span class="man-name">'+date.info[i].nickname+'</span></div><div class="list-time">'+date.info[i].score+'"</div></li>')
 				}else{
 					$('.Ranking-List .rank-list').append('<li><div class="list-man"><span class="num">'+date.info[i].ranking+'</span><span class="man-img"><img src="'+date.info[i].headimgurl+'"></span><span class="man-name">'+date.info[i].nickname+'</span></div><div class="list-time">'+date.info[i].score+'"</div></li>')
 				}
@@ -313,7 +313,7 @@ function ajax(){
 						for(var i in date.info){
 							if(i <= 3){
 								if(!date.info[i].headimgurl){
-									$('.three-list').append('<li><div class="list-man"><span class="man-img"><img src="http://www.i-ev.com/statics/game/bar_game/images/touxiang.png" alt=""></span><span class="man-name">'+date.info[i].nickname+'</span></div><div class="list-time">'+date.info[i].score+'"</div></li>')
+									$('.three-list').append('<li><div class="list-man"><span class="man-img"><img src="bar_game/images/touxiang.png" alt=""></span><span class="man-name">'+date.info[i].nickname+'</span></div><div class="list-time">'+date.info[i].score+'"</div></li>')
 								}else{
 									$('.three-list').append('<li><div class="list-man"><span class="man-img"><img src="'+date.info[i].headimgurl+'" alt=""></span><span class="man-name">'+date.info[i].nickname+'</span></div><div class="list-time">'+date.info[i].score+'"</div></li>')
 								}
@@ -417,32 +417,32 @@ function preload(arr){
     }
 }
 preload(
-	['bar_game/images/again-bg.png',
-	'bar_game/images/bar_bg.png',
-	'bar_game/images/btn-left-bg.png',
-	'bar_game/images/btn-right-bg.png',
-	'bar_game/images/logo.png',
-	'bar_game/images/number1.png',
-	'bar_game/images/number2.png',
-	'bar_game/images/number3.png',
-	'bar_game/images/rank_titbg.png',
-	'bar_game/images/share.png',
-	'bar_game/images/shou-start.png',
-	'bar_game/images/start-bg.jpg',
-	'bar_game/images/start-button.png',
-	'bar_game/images/start-footer-close.png',
-	'bar_game/images/start-inde-bg.png',
-	'bar_game/images/touxiang.png',
-	'bar_game/images/wood_bg.png',
-	'bar_game/images/download-banner.png',
-	'bar_game/images/JNClogo.png',
-	'bar_game/images/gongzhonghao.png',
-	'bar_game/images/downloadbtn.png',
-	'bar_game/images/start-bg.png',
-	'bar_game/images/ranking-btn-bg.png',
-	'bar_game/images/start-btn-btn.png',
-	'bar_game/images/Advertisementbg.png',
-	'bar_game/images/end-banner1bg.png',
-	'bar_game/images/startfooter1banner.png'
+	['images/again-bg.png',
+	'images/bar_bg.png',
+	'images/btn-left-bg.png',
+	'images/btn-right-bg.png',
+	'images/logo.png',
+	'images/number1.png',
+	'images/number2.png',
+	'images/number3.png',
+	'images/rank_titbg.png',
+	'images/share.png',
+	'images/shou-start.png',
+	'images/start-bg.jpg',
+	'images/start-button.png',
+	'images/start-footer-close.png',
+	'images/start-inde-bg.png',
+	'images/touxiang.png',
+	'images/wood_bg.png',
+	'images/download-banner.png',
+	'images/JNClogo.png',
+	'images/gongzhonghao.png',
+	'images/downloadbtn.png',
+	'images/start-bg.png',
+	'images/ranking-btn-bg.png',
+	'images/start-btn-btn.png',
+	'images/Advertisementbg.png',
+	'images/end-banner1bg.png',
+	'images/startfooter1banner.png'
 	]
 )
