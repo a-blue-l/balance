@@ -295,7 +295,7 @@ function endmark(timer){
 }
 function endText(){
 	$('.end-time').text(timer.toFixed(2)+"''");
-	// $('.end .end-courage').html(endmark(timer));
+	$('.end .end-courage').html(endmark(timer));
 	$('.end').css({display:'block'});
 }
 function ajax(){
@@ -387,7 +387,7 @@ function onFrame(event){
 		// }
 		if (angle < -90 || angle > 90) {
 			status = 2;
-			ajax();
+			// ajax();
 			endText();
 		}
 	}else if(status == 2){
